@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Hello World</title>
+    <url>/2019/12/30/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+ <a id="more"></a> 
+
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Hexo静态资源压缩-gulp</title>
+    <url>/2019/11/24/Hexo%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E5%8E%8B%E7%BC%A9-gulp/</url>
+    <content><![CDATA[<p>用自动化构建工具增强你的工作流程! 加快响应速度.</p>
+<a id="more"></a> 
+
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
+<p>如果你先前将 gulp 安装到全局环境中了, 请执行 <code>npm rm --global gulp</code> 将 gulp 删除再继续以下操作.</p>
+</blockquote>
+<h3 id="检查-node-npm-和-npx-是否正确安装"><a href="#检查-node-npm-和-npx-是否正确安装" class="headerlink" title="检查 node, npm 和 npx 是否正确安装"></a>检查 node, npm 和 npx 是否正确安装</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">node --version</span><br><span class="line">npm --version</span><br><span class="line">npx --version</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>如果上述工具还没安装, 请先下载 <a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a>.</p>
+</blockquote>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="安装-gulp-命令行工具"><a href="#安装-gulp-命令行工具" class="headerlink" title="安装 gulp 命令行工具"></a>安装 gulp 命令行工具</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install --global gulp-cli</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装-gulp-及插件-作为开发时依赖项"><a href="#安装-gulp-及插件-作为开发时依赖项" class="headerlink" title="安装 gulp 及插件, 作为开发时依赖项"></a>安装 gulp 及插件, 作为开发时依赖项</h3><ul>
+<li><code>gulp</code></li>
+<li><code>gulp-terser</code></li>
+<li><code>gulp-autoprefixer</code></li>
+<li><code>gulp-clean-css</code></li>
+<li><code>gulp-htmlmin</code></li>
+<li><code>gulp-htmlclean</code></li>
+<li><code>gulp-imagemin</code></li>
+</ul>
+<blockquote>
+<p>命令如下:</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install --save-dev gulp</span><br><span class="line">npm install --save-dev gulp-terser</span><br><span class="line">npm install --save-dev gulp-autoprefixer</span><br><span class="line">npm install --save-dev gulp-clean-css</span><br><span class="line">npm install --save-dev gulp-htmlmin</span><br><span class="line">npm install --save-dev gulp-htmlclean</span><br><span class="line">npm install --save-dev gulp-imagemin</span><br></pre></td></tr></table></figure>
+
+<h2 id="创建-gulpfile-文件"><a href="#创建-gulpfile-文件" class="headerlink" title="创建 gulpfile 文件"></a>创建 gulpfile 文件</h2><blockquote>
+<p>利用任何文本编辑器在<div style='color:red'>站点根目录</div>下创建一个名为 gulpfile.js 的文件, 并在文件中输入以下内容:</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>),</span><br><span class="line">    terser = <span class="built_in">require</span>(<span class="string">'gulp-terser'</span>),</span><br><span class="line">    autoprefixer = <span class="built_in">require</span>(<span class="string">'gulp-autoprefixer'</span>),</span><br><span class="line">    cleanCSS = <span class="built_in">require</span>(<span class="string">'gulp-clean-css'</span>),</span><br><span class="line">    htmlmin = <span class="built_in">require</span>(<span class="string">'gulp-htmlmin'</span>),</span><br><span class="line">    htmlclean = <span class="built_in">require</span>(<span class="string">'gulp-htmlclean'</span>),</span><br><span class="line">    imagemin = <span class="built_in">require</span>(<span class="string">'gulp-imagemin'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> configs = &#123;</span><br><span class="line">    autoprefixer: &#123;</span><br><span class="line">        overrideBrowserslist: [</span><br><span class="line">            <span class="string">'last 2 versions'</span>,</span><br><span class="line">            <span class="string">'&gt; 1%'</span>,</span><br><span class="line">            <span class="string">'Chrome &gt;= 40'</span>,</span><br><span class="line">            <span class="string">'Firefox &gt;= 40'</span>,</span><br><span class="line">            <span class="string">'ie &gt;= 10'</span>,</span><br><span class="line">            <span class="string">'Safari &gt;= 8'</span></span><br><span class="line">        ]</span><br><span class="line">    &#125;,</span><br><span class="line">    cleanCSS: &#123;</span><br><span class="line">        compatibility: <span class="string">'ie10'</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 压缩js文件</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">minifyJS</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> gulp.src([<span class="string">'public/**/*.js'</span>, <span class="string">'!public/**/*.min.js'</span>])</span><br><span class="line">        .pipe(terser(&#123;</span><br><span class="line">            keep_fnames: <span class="literal">true</span>,</span><br><span class="line">            mangle: <span class="literal">false</span></span><br><span class="line">        &#125;))</span><br><span class="line">        <span class="comment">// .pipe(rename(&#123; suffix: '.min' &#125;))</span></span><br><span class="line">        .pipe(gulp.dest(<span class="string">'public'</span>));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 压缩css文件</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">minifyCSS</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> gulp.src([<span class="string">'public/**/*.css'</span>, <span class="string">'!public/**/*.min.css'</span>])</span><br><span class="line">        .pipe(autoprefixer(configs.autoprefixer))</span><br><span class="line">        .pipe(cleanCSS(configs.cleanCSS))</span><br><span class="line">        <span class="comment">// .pipe(rename(&#123; suffix: '.min' &#125;))</span></span><br><span class="line">        .pipe(gulp.dest(<span class="string">'public'</span>));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 压缩html文件</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">minifyHTML</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> gulp.src(<span class="string">'public/**/*.html'</span>)</span><br><span class="line">        .pipe(htmlmin(&#123;</span><br><span class="line">            minifyJS: <span class="literal">true</span>,</span><br><span class="line">            minifyCSS: <span class="literal">true</span>,</span><br><span class="line">            minifyURLs: <span class="literal">true</span>,</span><br><span class="line">            removeComments: <span class="literal">true</span>,</span><br><span class="line">            collapseWhitespace: <span class="literal">true</span>,</span><br><span class="line">            removeRedundantAttributes: <span class="literal">true</span></span><br><span class="line">        &#125;))</span><br><span class="line">        .pipe(htmlclean(&#123;</span><br><span class="line">            protect: <span class="regexp">/&lt;\!--%fooTemplate\b.*?%--&gt;/g</span>,</span><br><span class="line">            edit: <span class="function"><span class="keyword">function</span> (<span class="params">html</span>) </span>&#123;</span><br><span class="line">                <span class="keyword">return</span> html.replace(<span class="regexp">/\begg(s?)\b/ig</span>, <span class="string">'omelet$1'</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;))</span><br><span class="line">        .pipe(gulp.dest(<span class="string">'public'</span>));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 压缩public/images目录内图片</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">minifyImages</span>(<span class="params">cb</span>) </span>&#123;</span><br><span class="line">    gulp.src(<span class="string">'public/images/**/*.*'</span>)</span><br><span class="line">        .pipe(imagemin([</span><br><span class="line">            imagemin.gifsicle(&#123;<span class="attr">interlaced</span>: <span class="literal">true</span>&#125;),</span><br><span class="line">            imagemin.jpegtran(&#123;<span class="attr">progressive</span>: <span class="literal">true</span>&#125;),</span><br><span class="line">            imagemin.optipng(&#123;<span class="attr">optimizationLevel</span>: <span class="number">5</span>&#125;),</span><br><span class="line">            imagemin.svgo(&#123;</span><br><span class="line">                plugins: [</span><br><span class="line">                    &#123;<span class="attr">removeViewBox</span>: <span class="literal">true</span>&#125;,</span><br><span class="line">                    &#123;<span class="attr">cleanupIDs</span>: <span class="literal">false</span>&#125;</span><br><span class="line">                ]</span><br><span class="line">            &#125;)</span><br><span class="line">        ]))</span><br><span class="line">        .pipe(gulp.dest(<span class="string">'public/images'</span>));</span><br><span class="line">    cb();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">exports.minifyJS = minifyJS;</span><br><span class="line">exports.minifyCSS = minifyCSS;</span><br><span class="line">exports.minifyHTML = minifyHTML;</span><br><span class="line">exports.minifyImages = minifyImages;</span><br><span class="line"></span><br><span class="line">gulp.task(<span class="string">'build'</span>, gulp.series(</span><br><span class="line">    gulp.parallel(</span><br><span class="line">        minifyJS,</span><br><span class="line">        minifyCSS,</span><br><span class="line">        minifyHTML,</span><br><span class="line">        minifyImages</span><br><span class="line">    )</span><br><span class="line">));</span><br><span class="line"></span><br><span class="line">gulp.task(<span class="string">'default'</span>, gulp.series(<span class="string">'build'</span>));</span><br><span class="line"></span><br><span class="line"><span class="comment">// 文件监控</span></span><br><span class="line">gulp.task(<span class="string">'watch'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    gulp.watch(<span class="string">'public/**'</span>, gulp.series(<span class="string">'build'</span>));</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><blockquote>
+<p>要运行 gulp 任务, 只需每次在执行 <code>generate</code> 命令后执行 <code>gulp</code> 就可以实现对静态资源的压缩. <code>gulp</code>后面可以加上要执行的任务名, 例如 <code>gulp watch</code> , 如果没有指定任务名, 则会执行任务名为 <code>default</code> 的默认任务.</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo generate</span><br><span class="line">gulp</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>gulp</tag>
+      </tags>
+  </entry>
+</search>
