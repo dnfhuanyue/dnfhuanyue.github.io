@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>小米6-MIUI-10-3-1-0-稳定版安装Google-Camera</title>
-    <url>/2019/12/31/%E5%B0%8F%E7%B1%B36-MIUI-10-3-1-0-%E7%A8%B3%E5%AE%9A%E7%89%88%E5%AE%89%E8%A3%85Google-Camera/</url>
-    <content><![CDATA[<p>title: 小米6 MIUI 10.3.1.0 | 稳定版安装Google Camera<br>date: 2019-12-31 17:44:56<br>categories: Google Camera<br>tags:</p>
-<ul>
-<li>MIUI</li>
-<li>Google Camera</li>
-</ul>
-<p>谷歌相机照亮你的美.</p>
+    <title>小米6 MIUI 10.3.1.0 | 稳定版安装Google Camera</title>
+    <url>/2019/12/31/%E5%B0%8F%E7%B1%B36%20MIUI%2010.3.1.0%20%20%E7%A8%B3%E5%AE%9A%E7%89%88%E5%AE%89%E8%A3%85Google%20Camera/</url>
+    <content><![CDATA[<p>谷歌相机照亮你的美.</p>
 <a id="more"></a> 
 
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
@@ -129,6 +124,13 @@
 
 <h3 id="夜晚"><a href="#夜晚" class="headerlink" title="夜晚"></a>夜晚</h3><p><img src="https://imgsrc.baidu.com/super/pic/item/4610b912c8fcc3cebec6c2619d45d688d43f2059.jpg" alt="avatar"></p>
 ]]></content>
+      <categories>
+        <category>Google Camera</category>
+      </categories>
+      <tags>
+        <tag>MIUI</tag>
+        <tag>Google Camera</tag>
+      </tags>
   </entry>
   <entry>
     <title>Hexo静态资源压缩-gulp</title>
