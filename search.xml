@@ -21,7 +21,9 @@
 </li>
 <li>伪Google服务<ul>
 <li><a href="https://microg.org/" target="_blank" rel="noopener">Services Core</a></li>
-<li>谷歌相机</li>
+</ul>
+</li>
+<li>谷歌相机<ul>
 <li><a href="https://www.celsoazevedo.com/files/android/google-camera/" target="_blank" rel="noopener">Google Camera下载</a></li>
 </ul>
 </li>
@@ -55,7 +57,7 @@
 <li>手机关机</li>
 <li>同时按下音量减少键+关机键,稍等会进入fastboot模式, 如下图所示</li>
 </ol>
-<p><img src="https://www.miui.com/static/article/innerimg/tongyong/tongyong-fastboot.jpg" alt="avatar"></p>
+<p><img src="http://www.miui.com/static/article/innerimg/tongyong/tongyong-fastboot.jpg" alt="avatar"></p>
 <ol>
 <li><p>打开电脑以管理员运行CMD, 进入到ADB所在目录, 执行以下命令:</p>
 <ul>
