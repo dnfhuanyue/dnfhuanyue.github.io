@@ -57,9 +57,10 @@
 <li>手机关机</li>
 <li>同时按下音量减少键+关机键,稍等会进入fastboot模式, 如下图所示</li>
 </ol>
-<p><img src="http://www.miui.com/static/article/innerimg/tongyong/tongyong-fastboot.jpg" alt="avatar"></p>
-<ol>
-<li><p>打开电脑以管理员运行CMD, 进入到ADB所在目录, 执行以下命令:</p>
+<p><img src="https://static.bbs.miui.com/static/article/innerimg/tongyong/tongyong-fastboot.jpg" alt="avatar"></p>
+<ol start="3">
+<li>打开电脑以管理员运行CMD, 进入到ADB所在目录, 执行以下命令:</li>
+</ol>
 <ul>
 <li>列出fastboot设备</li>
 </ul>
@@ -75,8 +76,6 @@
 </ul>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">fastboot oem reboot-recovery</span><br></pre></td></tr></table></figure>
 
-</li>
-</ol>
 <blockquote>
 <p>recovery模式如下图所示</p>
 </blockquote>
@@ -93,18 +92,14 @@
 <img src="https://dss1.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/super/pic/item/2f738bd4b31c870165cbc7b4287f9e2f0708ff67.jpg" alt="avatar" style="zoom:25%;" />
 
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="启用-Camera2-API"><a href="#启用-Camera2-API" class="headerlink" title="启用 Camera2 API"></a>启用 Camera2 API</h3><ol>
-<li><p>打开文件管理器找到酷安安装包安装</p>
-</li>
-<li><p>下载<strong>Scene</strong>和<strong>Manual Camera Compatibility Test</strong></p>
-</li>
-<li><p>打开<strong>Magisk Manager</strong>俗称 “面具”</p>
-</li>
-<li><p>打开<strong>Scene</strong>给予超级用户权限, 如下图; 并开启<strong>Camera2 HAL、EIS</strong>选项, 位置如下</p>
+<li>打开文件管理器找到酷安安装包安装</li>
+<li>下载<strong>Scene</strong>和<strong>Manual Camera Compatibility Test</strong></li>
+<li>打开<strong>Magisk Manager</strong>俗称 “面具”</li>
+<li>打开<strong>Scene</strong>给予超级用户权限, 如下图; 并开启<strong>Camera2 HAL、EIS</strong>选项, 位置如下</li>
+</ol>
 <ul>
 <li>常用功能→附加功能→全部→应用程序→<strong>Camera2 HAL、EIS</strong></li>
 </ul>
-</li>
-</ol>
 <img src="https://dss1.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/super/pic/item/cb8065380cd791238b179e26a2345982b3b780e8.jpg" alt="avatar" style="zoom:25%;" />
 
 <img src="https://dss0.baidu.com/94o3dSag_xI4khGko9WTAnF6hhy/super/pic/item/9a504fc2d5628535ddd5a7739fef76c6a7ef63ae.jpg" alt="avatar" style="zoom:25%;" />
